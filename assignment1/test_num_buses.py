@@ -6,6 +6,12 @@ class TestNumBuses(unittest.TestCase):
     """ Test class for function a1.num_buses. """
 
     # Add your test methods for a1.num_buses here.
+    def test_num_buses_neg(self):
+        """negative number of people, no bus needed"""
+        actual = a1.num_buses(-3)
+        expected = 0
+        self.assertEqual(actual, expected)
+
     def test_num_buses_zero(self):
         """no people, no bus needed"""
         actual = a1.num_buses(0)

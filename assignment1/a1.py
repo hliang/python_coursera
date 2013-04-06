@@ -13,12 +13,16 @@ def num_buses(n):
     >>> num_buses(50)
     1
     """
-    # partial bus is needed
-    if n%50 :
-        return n//50+1
 
+    #negative number of people, no bus needed
+    if n < 0:
+        return 0
     else:
-        return n//50
+        # partial bus is needed
+        if n%50 :
+            return n//50+1
+        else:
+            return n//50
 
 
 def stock_price_summary(price_changes):
